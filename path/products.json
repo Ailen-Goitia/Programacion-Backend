@@ -1,0 +1,50 @@
+[
+    {
+        "id":1,
+        "title": "phone",
+        "description": "descriptionone",
+        "price": 170000,
+        "image": "url",
+        "code": "codeone",
+        "stock": 15
+    },
+    {
+        "id":2,
+        "title": "samsumg",
+        "description": "descriptiontwo",
+        "price": 200000,
+        "image": "url",
+        "code": "codetwo",
+        "stock":20
+    },
+    {
+        "id":3,
+        "title": "motorola",
+        "description": "descriptionthree",
+        "price": 180000,
+        "image": "url",
+        "code": "codethree",
+        "stock":0
+    },
+    {
+        "id":4,
+        "title": "lg",
+        "description": "descriptionfour",
+        "price": 250000,
+        "image": "url",
+        "code": "codefour",
+        "stock":20
+    },
+    {
+        "id":5,
+        "title": "xiaomi",
+        "description": "descriptionfive",
+        "price":120000 ,
+        "image": "url",
+        "code": "codefive",
+        "stock":15
+    }
+
+   
+]
+
