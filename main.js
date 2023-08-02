@@ -91,6 +91,8 @@ class ProductManager {
 async function generator() {
     const productManager = new ProductManager("./path/products.json");
 
+    //const list = await productManager.getProduct()
+
     const only = await productManager.getProductById(1)
 
     console.log(only)
