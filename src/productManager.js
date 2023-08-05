@@ -1,7 +1,6 @@
-const fs = require("fs")
-const { json } = require("node:stream/consumers")
+import fs from "fs"
 
-class ProductManager {
+export default class ProductManager {
     constructor(path) {
         this.path = path,
 
@@ -88,14 +87,14 @@ class ProductManager {
 }
 
 
-async function generator() {
-    const productManager = new ProductManager("./path/products.json");
+// async function generator() {
+    //const productManager = new ProductManager("./path/products.json");
 
     //const list = await productManager.getProduct()
 
-    const only = await productManager.getProductById(1)
+   // const only = await productManager.getProductById(1)
 
-    console.log(only)
-}
+    //console.log(only)
+//}
 
-generator()
+//generator()
