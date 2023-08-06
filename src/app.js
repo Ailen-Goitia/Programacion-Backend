@@ -2,7 +2,7 @@ import express from 'express';
 import ProductManager from './productManager.js';
 const manager = new ProductManager("./path/products.json")
 const app = express();
-const PORT = 4000;
+const PORT = 8080;
 
 app.get("/products", async(req,res) => {
     const {limit} = req.query
@@ -18,17 +18,19 @@ app.get("/products", async(req,res) => {
 app.get("/products/:pid", async(req,res) => {
     const {pid} = req.params
     const products = await manager.getProduct()
-    const findProducts = products.find(element => element.id === parseInts(pid))
-    console.log(findProducts)
-    res.send({status:"Success",findProducts})
+    const numberId = parseInt(pid);
+
+    const findId = products.find (element => element.id === numberId);
+    if (findId) {
+        console.log(findId);
+        res.send({status: "Success",findId})
+    }else{
+        console.log("Producto no encontrado");
+        res.send ({status: "Error", message: "Producto no encontrado"});
+    }
 
 }) 
 
 app.listen(PORT,() => {
     console.log("El servidor esta funcionando correctamente")
-})
-app.listen(PORT,() => {
-console.log(`El servidor en el puerto :${PORT}
-http://localhost:${PORT}`);
-
 })
