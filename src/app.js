@@ -1,8 +1,8 @@
 import express from 'express';
 import ProductManager from './productManager.js';
-const manager = new ProductManager("../path/products.json")
+const manager = new ProductManager("./path/products.json")
 const app = express();
-const PORT = 8080;
+const PORT = 4000;
 
 app.get("/products", async(req,res) => {
     const {limit} = req.query
@@ -26,4 +26,9 @@ app.get("/products/:pid", async(req,res) => {
 
 app.listen(PORT,() => {
     console.log("El servidor esta funcionando correctamente")
+})
+app.listen(PORT,() => {
+console.log(`El servidor en el puerto :${PORT}
+http://localhost:${PORT}`);
+
 })
